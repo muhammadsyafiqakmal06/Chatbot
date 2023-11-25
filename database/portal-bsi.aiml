@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>semester * krs</pattern>
+        <template>
+            <think>
+                <set name="angka"><star index="1" /></set>
+            </think>
+
+            <condition name="angka" value="satu">Tidak, untuk semester 1 KRS masih paket.</condition>
+            <condition name="angka" value="dua">Ya. Mahasiswa semester 2 meskipun masih mendapat
+                paket semester 2, namun tetap harus melakukan KRS mandiri.</condition>
+
+        </template>
+    </category>
+
+</aiml>

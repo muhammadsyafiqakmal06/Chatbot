@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+
+    <category>
+        <pattern>selamat *</pattern>
+        <template>
+            <think>
+                <set name="salam"><star index="1"/></set>
+            </think>
+
+            <condition name="salam" value="pagi">Halo kak <get name="username"/>, Selamat Pagi ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="siang">Halo kak <get name="username"/>, Selamat Siang ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="sore">Halo kak <get name="username"/>, Selamat sore ada yang bisa saya bantu?</condition>
+            <condition name="salam" value="malam">Halo kak <get name="username"/>, Selamat malam ada yang bisa saya bantu?</condition>
+        </template>
+    </category>
+
+    <category>
+        <pattern>nama *</pattern>
+        <template>hai kak <set name="username"><star index="1"/></set>, Selamat datang di BOT Helpdesk, Ada yang bisa di bantu kak <get name="username"/>?</template>
+    </category>
+
+    <!-- <category>
+        <pattern>halo *</pattern>
+        <template>hai kak <set name="username"><star index="1"/></set>, Selamat datang di BOT Helpdesk, Ada yang bisa di bantu kak <get name="username"/>?</template>
+    </category> -->
+
+    <category>
+        <pattern>hai *</pattern>
+        <template>halo <set name="username"><star index="1"/></set>, Selamat datang di BOT Helpdesk, Ada yang bisa di bantu kak <get name="username"/>?</template>
+    </category>
+
+    <category>
+        <pattern>Halo *</pattern>
+        <template>
+            <random>
+                <li>Hai kak ada yang bisa kami bantu ?</li>
+                <li>Halo! dengan BOT Helpdesk ada yang bisa saya bantu ?</li>
+                <li>Halo kak, saya BOT Helpdesk, ada yang bisa bantu ?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Hai *</pattern>
+        <template>
+            <random>
+                <li>Hai kak ada yang bisa kami bantu ?</li>
+                <li>Halo! dengan BOT Helpdesk ada yang bisa saya bantu ?</li>
+                <li>Halo kak, saya BOT Helpdesk, ada yang bisa bantu ?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>Assalamualaikum *</pattern>
+        <template>
+            Wa'alaikumussalam Warahmatullahi Wabarakatuh kak<get name="username"/>, Ada yang bisa saya bantu?
+        </template>
+    </category>
+
+    <category>
+        <pattern>makasih *</pattern>
+        <template>Sama-sama kak <get name="username"/>, senang bisa membantu!</template>
+    </category>
+
+    <category>
+        <pattern>Terima Kasih *</pattern>
+        <template>
+            Sama-sama kak <get name="username"/>, senang bisa membantu!
+        </template>
+    </category>
+
+</aiml>
